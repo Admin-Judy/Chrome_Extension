@@ -1,9 +1,23 @@
-.container {
-    width: 240px;
-    margin: 0 auto;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .header {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
   }
   
   canvas {
-    border: 1px solid #333;
+    border: 1px solid #fff;
   }
   

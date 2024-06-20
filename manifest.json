@@ -1,25 +1,30 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Tetris Extension",
     "version": "1.0",
     "description": "Play Tetris in your browser!",
-    "browser_action": {
+    "action": {
       "default_popup": "popup.html",
-      "default_icon": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-      }
+      "default_icon": "images/icon.png"
     },
-    "permissions": [
+    "permissions": [],
+    "host_permissions": [
       "activeTab"
     ],
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    },
     "web_accessible_resources": [
-      "tetris.js",
-      "styles.css"
+      {
+        "resources": [
+          "tetris.js",
+          "styles.css"
+        ],
+        "matches": ["<all_urls>"]
+      }
     ]
   }
+  
   
   
   
